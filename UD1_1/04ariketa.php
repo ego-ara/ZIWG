@@ -1,53 +1,33 @@
 <?php
-$x = 1;
-$y = 2;
-$z = 3;
+$x = -5;
+$y = 0;
+$z = 0;
 
+//komprobatu X baldin baden aundiena
 if($x >= $y && $x >= $z){
+    //komprobatu Y eta Z artean zein den aundiena
     if($y >= $z){
-        echo($x.",".$y.",".$z);
+        echo("1.aukera"."<br>".$x.",".$y.",".$z."<br>".$z.",".$y.",".$x);
     }else{
-        echo($x.",".$z.",".$y);
+        echo("2.aukera"."<br>".$x.",".$z.",".$y."<br>".$y.",".$z.",".$x);
     }
     
+//komprobatu y baldin baden aundiena
 }elseif($y >= $x && $y >= $z){
+    //komprobatu X eta Z artean zein den aundiena
     if($x >= $z){
-        echo($y.",".$x.",".$z);
+        echo("3.aukera"."<br>".$y.",".$x.",".$z."<br>".$z.",".$x.",".$y);
     }else{
-        echo($y.",".$z.",".$x);
+        echo("4.aukera"."<br>".$y.",".$z.",".$x."<br>".$x.",".$z.",".$y);
     }
+
+//komprobatu z baldin baden aundiena
 }elseif($z >= $y && $z >= $x){
+    //komprobatu X eta Y artean zein den aundiena
     if($x >= $y){
-        echo($z.",".$x.",".$y);
+        echo("5.aukera"."<br>".$z.",".$x.",".$y."<br>".$y.",".$x.",".$z);
     }else{
-        echo($z.",".$y.",".$x);
+        echo("6.aukera"."<br>".$z.",".$y.",".$x."<br>".$x.",".$y.",".$z);
     }
 }
-echo("<br>");
-if($x <= $y && $x <= $z){
-    if($y <= $z){
-        echo($x.",".$y.",".$z);
-    }else{
-        echo($x.",".$z.",".$y);
-    }
-    
-}elseif($y <= $x && $y <= $z){
-    if($x <= $z){
-        echo($y.",".$x.",".$z);
-    }else{
-        echo($y.",".$z.",".$x);
-    }
-    
-}elseif($z <= $y && $z <= $x){
-    if($x <= $y){
-        echo($z.",".$x.",".$y);
-    }else{
-        echo($z.",".$y.",".$x);
-    }
-    
-}
-
-
-
-
 ?>
