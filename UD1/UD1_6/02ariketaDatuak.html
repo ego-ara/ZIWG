@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos personales (Formulario)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 800px;
+        }
+        legend {
+            font-size: 14px;
+        }
+        .instrucciones {
+            margin-bottom: 20px;
+        }
+        .fila {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        .campo {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .campo label {
+            font-weight: bold;
+        }
+        .campo input[type="text"], .campo input[type="number"], .campo select {
+            padding: 4px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .opciones-inline {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 5px;
+        }
+        .aficiones-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .aficiones-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .aficiones-grid {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            gap: 10px 40px;
+            width: fit-content;
+        }
+        .aficiones-grid label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .botones {
+            display: flex;
+            gap: 10px;
+        }
+        .botones button {
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Datos personales (Formulario)</h1>
+
+    <form action="02ariketaDatuak.php" method="post">
+        <fieldset>
+            <legend>Formulario</legend>
+            
+            <p class="instrucciones">Escriba los datos siguientes:</p>
+            
+            <!-- Primera Fila -->
+            <div class="fila">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" style="width: 180px;">
+                </div>
+                <div class="campo">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" style="width: 180px;">
+                </div>
+                <div class="campo">
+                    <label for="edad">Edad:</label>
+                    <select id="edad" name="edad" style="width: 150px;">
+                        <option value=""></option>
+                        <!-- Puedes añadir opciones de edad aquí si lo deseas -->
+                        <option value="joven">Menor de 18</option>
+                        <option value="adulto">18 - 65</option>
+                        <option value="mayor">Mayor de 65</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Segunda Fila -->
+            <div class="fila" style="margin-top: 20px;">
+                <div class="campo">
+                    <label for="peso">Peso:</label>
+                    <div style="display: flex; align-items: center; gap: 5px;">
+                        <input type="number" id="peso" name="peso" style="width: 50px;"> kg
+                    </div>
+                </div>
+                
+                <div class="campo" style="margin-left: 20px;">
+                    <label>Sexo:</label>
+                    <div class="opciones-inline">
+                        <label><input type="radio" name="sexo" value="hombre"> Hombre</label>
+                        <label><input type="radio" name="sexo" value="mujer"> Mujer</label>
+                    </div>
+                </div>
+
+                <div class="campo" style="margin-left: 20px;">
+                    <label>Estado Civil:</label>
+                    <div class="opciones-inline">
+                        <label><input type="radio" name="estado_civil" value="soltero"> Soltero</label>
+                        <label><input type="radio" name="estado_civil" value="casado"> Casado</label>
+                        <label><input type="radio" name="estado_civil" value="otro"> Otro</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tercera Fila: Aficiones -->
+            <div class="aficiones-container" style="margin-top: 20px;">
+                <div style="display: flex; gap: 20px;">
+                    <span class="aficiones-label">Aficiones:</span>
+                    <div class="aficiones-grid">
+                        <label><input type="checkbox" name="aficiones[]" value="cine"> Cine</label>
+                        <label><input type="checkbox" name="aficiones[]" value="literatura"> Literatura</label>
+                        <label><input type="checkbox" name="aficiones[]" value="tebeos"> Tebeos</label>
+                        <label><input type="checkbox" name="aficiones[]" value="deporte"> Deporte</label>
+                        <label><input type="checkbox" name="aficiones[]" value="musica"> Música</label>
+                        <label><input type="checkbox" name="aficiones[]" value="television"> Televisión</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones -->
+            <div class="botones">
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+            </div>
+
+        </fieldset>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8"> <!-- Karaktere bereziak eta ikurrak ondo ikusteko -->
+    <title>Kalkulagailua</title>
+    <!-- Estilo fitxategi laburtuarekin lotura -->
+    <link rel="stylesheet" href="03ariketaKalkulagailua.css">
+</head>
+<body>
+
+    <!-- Kalkulagailuaren kanpoko koadroa -->
+    <div class="kalkulagailua">
+        <h1>Kalkulagailua</h1>
+        
+        <!-- Formularioa: datuak POST bidez bidaltzen ditu zure PHP fitxategira -->
+        <form action="03ariketaKalkulagailua.php" method="POST">
+            
+            <!-- Testu-koadroak biltzen dituen lerroa -->
+            <div class="eremuak">
+                <!-- 'required' atributuarekin nabigatzaileak berak behartzen du eremua betetzera, JavaScript-ik gabe -->
+                <label>1. zenbakia: <input type="number" name="zenb1" required></label>
+                <label>2. zenbakia: <input type="number" name="zenb2" required></label>
+            </div>
+            
+            <!-- Lau botoiak biltzen dituen lerroa -->
+            <div class="botoiak">
+                <!-- Botoi bakoitzak 'eragiketa' izen bera du, baina balio (value) desberdina PHPretzat -->
+                <button type="submit" name="eragiketa" value="batuketa">Batuketa</button>
+                <button type="submit" name="eragiketa" value="kenketa">Kenketa</button>
+                <button type="submit" name="eragiketa" value="biderkaketa">Biderkaketa</button>
+                <button type="submit" name="eragiketa" value="zatiketa">Zatiketa</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

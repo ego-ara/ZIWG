@@ -1,0 +1,63 @@
+/* Orrialdeko gorputzaren diseinu orokorra */
+body {
+    font-family: "Times New Roman", serif; /* Irudiaren letra tipo klasikoa */
+    margin: 20px;
+}
+
+/* Kanpoko muga urdin bikoitza marrazten duen edukiontzia */
+.kalkulagailua {
+    border: 4px double #1d4b8f; /* Ertz urdin bikoitza */
+    padding: 20px; /* Barneko tartea ertzen eta testuen artean */
+    display: inline-block; /* Koadroa barruko edukiaren tamainara egokitzen da */
+}
+
+/* Izenburu nagusia maiuskulaz eta lodierarik gabe */
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0 0 15px 0; /* Beheko testu-koadroekiko tartea */
+}
+
+/* Testu eremuak lerro berean jartzeko */
+.eremuak {
+    display: flex;
+    gap: 15px; /* Sarreren arteko tarte horizontala */
+    margin-bottom: 15px; /* Beheko botoiekiko tartea */
+}
+
+/* Testu-koadro zurien tamaina eta muga fina */
+.eremuak input {
+    width: 140px;
+    height: 22px;
+    border: 1px solid #7a7a7a;
+    padding: 0 5px; /* Testua ertzetara ez pegatzeko barne espazioa */
+}
+
+/* Botoiak lerrokatzeko */
+.botoiak {
+    display: flex;
+    gap: 12px; /* Botoien arteko tartea */
+}
+
+/* Botoien hasierako estilo klasikoa (3D erliebe efektuarekin) */
+.botoiak button {
+    background: #f0f0f0;
+    padding: 4px 15px;
+    font-family: inherit; /* Letra tipo bera herentziaz jaso */
+    font-size: 15px;
+    cursor: pointer; /* Sagua gainean jartzean eskutxoa agertzeko */
+    text-transform: uppercase; /* Testua maiuskulaz */
+    border: 2px solid; /* 2px-eko lodiera finkoa dardararik ez egiteko */
+    border-color: #a0a0a0 #707070 #707070 #a0a0a0; /* Goian/ezkerrean argia, behean/eskuinean iluna */
+}
+
+/* Sagua gainetik pasatzean (Hover), muga guztiak beltz finko bihurtzen dira */
+.botoiak button:hover {
+    border-color: #000000;
+}
+
+/* Klik egitean (Active), erliebearen koloreak alderantzikatzen dira sakatze efektua emateko */
+.botoiak button:active {
+    border-color: #707070 #a0a0a0 #a0a0a0 #707070;
+}
